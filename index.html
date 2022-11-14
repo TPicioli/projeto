@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="_css/estilo.css" >
+        <!--Primeiro parâmetro do link é o rel. Stylesheet é folha de estilo. href = hypertext reference-->
+        <title>Tudo sobre Google Glass</title>
+    </head>
+    <script language="javascript" src="_javascript/funcoes.js   "> </script>
+    <body>
+        <div id="interface">
+    <header id="cabecalho">
+<hgroup>
+<h1>Google Glass</h1>
+<h2>A revolução do Google está chegando</h2>
+</hgroup> 
+
+    <img ID="icone" src="_imagens/glass-oculos-preto-peq.png"/>
+
+<nav id="menu"> <!--Tag usada para criar menu de navegação-->
+    <h1> Menu Principal</h1>
+    <ul> <!--<ul start="2">-->
+        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="specs.html">Especificações</a></li>
+        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+            <!--<ul>
+                <li>Músicas</li>
+                <li>Vídeos</li>
+            </ul>-->
+        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+</nav> <!--A tag OL (Ordered lists) vai criar uma lista ordenada. Utilizando os valores do parâmetro TYPE, você pode criar uma lista ordenada numérica (1), alfabética (a/A) ou em algarismos romanos (i/I). O parâmetro START da tag OL vai indicar onde vai começar a contagem dos itens. O parâmetro START aceita apenas valores numéricos, independente da maneira utilizada para numerar. A tag UL (Unordered lists) vai criar uma lista com demarcadores ou lista não-ordenada. O parâmetro TYPE para OL suporta os valores CIRCLE, SQUARE ou DISC. Para a tag UL, o parâmetro START simplesmente não funciona. Dentro das listas temos os itens que correspondem aos itens da lista, List items (li)-->
+    </header>
+        
+    <section id="corpo">
+        <article id="noticia-principal"> <!--Tag para artigos. Dentro de uma <section> podemos ter vários <article>-->
+            <header id="cabecalho-artigo">
+<hgroup>
+<h3>Tecnologia <!--&nbsp; &nbsp; &nbsp; são espaços em braco--> > <!--&nbsp; &nbsp; &nbsp;--> Inovações</h3>
+<h1>Saiba tudo sobre o Google Glass</h1>
+<h3>por Thiago Picioli&copy;</h3>
+<h3 class="direita">Atulizado em 27/03/2022</h3>
+</hgroup>
+            </header>
+<!--tag <sup> cria um texto sub-escrito; tag <sub> cria um texto sob-escrito; tags usadas para fazer formulas matemáticas--> 
+<h2>O que é</h2>
+<p>O <b>Google Glass</b> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <i><a href="http://glass.google.com" target="_blank">Project Glass</i></a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeo&shy;con&shy;ferên&shy;cias. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Google Glass</em> encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-<wbr>furto e de desbloqueio de tela para o acessório.</p> <!--tag wbr quebra a linha e &shy quebra a linha com hifen. Tag <em> signigica ENFASE, deixa a letra igual o itálica, mas muda o valor semantico. Tag <a> é a base para criação de um link. O parâmetro Hypertext Reference, ou HREF. Ele cria uma referência hipertexto para outras páginas. O parâmetro TARGET da tag A vai permitir indicar em qual janela o conteúdo será aberto. O valor _blank vai permitir abrir em uma janela em branco, enquanto o parâmetro _self vai abrir o conteúdo na janela atual.-->
+
+<figure class="foto-legenda"><!--Faz com que sua imagem apareça em mecanismo de buscas-->
+    <img src="_imagens/glass-quadro-homem-mulher.jpg">
+    <figcaption> <!--Tag de legenda da imagem-->
+        <h3>Google Glass</h3>
+        <p>Uma nova maneira de ver o mundo.</p>
+    </figcaption>
+</figure>
+<h2>Data de lançamento</h2>
+<p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</p>
+
+
+<h2>Especificações Técnicas</h2>
+    <table id="tabelaspec">
+        <caption>Técnica do Google Glass <span>Mar/2013</span></caption> 
+            <tr><td class="esquerda">Tela</td><td class="direita">Resolução equivalente a tela de 25"</td></tr>
+            <tr><td rowspan="2" class="esquerda">Câmera</td><td class="direita">5MP para fotos</td></tr>
+            <tr><td class="direita">720p para vídeos</td></tr> <!--<rowspan> diz quantas linhas esse <td> irá ocupar. <colspan> diz que um célula ocupe mais de uma coluna. (uma célula que ocupa a coluna inteira)-->
+            <tr><td rowspan="2"  class="esquerda">Conectividade</td><td class="direita">Wi-Fi</td></tr>
+            <tr><td class="direita">Bluetooth</td></tr>
+            <tr><td class="esquerda">Memória Interna</td><td class="direita">12GB</td></tr>
+    </table> <!--Toda tabela são compostos por linhas, e todas as linhas são compostas por células. As linhas são as Table row <tr>, uma tabela pode ter várias linhas, cada linha dentro da tag tr. Dentro de um <tr> teremos as células, cada uma dessas células serão dados para compor a tabela, os dados são chamados de table data <td>  -->
+
+<h2>Como funciona</h2>
+<p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça.</p>
+
+<h2>O que você pode fazer com o Google Glass</h2>
+<p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-<wbr>humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
+
+<video id="filme" controls="controls" poster="_imagens/video-mini01.jpg"><!--tag poster = coloca um poster no video-->
+    <source src="_media/how-it-feels.mp4" type="video/mp4"/>
+    <source src="_media/how-it-feels.webm" type="video/ogg"/>
+    Desculpe, mas não foi possível carregar o áudio
+</video>
+        </article>
+    </section>
+<aside id="lateral"><!--Tag aside é para colocar uma sessão lateral-->
+
+<h1>Outras Notícias</h1>
+<h2>Vídeo mais recente</h2>
+
+<video id="filme" controls="controls" poster="_imagens/video-mini02.jpg">
+    <source src="_media/one-day.mp4" type="video/mp4"/>
+    <source src="_media/one-day.webm" type="video/ogg"/>
+    Desculpe, mas não foi possível carregar o áudio
+</video>
+
+<h2>Novidades no Glass</h2>
+<p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.</p>
+
+<p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.</p>
+</aside>
+<footer id="rodape">
+<p>Copyright 2022 - by Thiago Picioli <br>
+<a href="http://www.facebook.com/ThPiciolli/" target="blank">Facebook</a></a></p> <!--o parâmetro 'target: blank' faz com que o link abra em uma nova aba-->
+</footer>
+</div>
+</body>
+</html>

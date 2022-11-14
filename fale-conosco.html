@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="_css/estilo.css">
+        <title>Tudo sobre Google Glass</title>
+        <link rel="stylesheet" href="_css/form.css">
+    </head>
+    <script language="javascript" src="_javascript/funcoes.js   "></script>
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cQtd').value);
+                tot = qtd * 1500;
+                document.getElementById('cTot').value = tot;
+            }
+    </script>
+    <body>
+        <div id="interface">
+    <header id="cabecalho">
+<hgroup>
+<h1>Google Glass</h1>
+<h2>A revolução do Google está chegando</h2>
+</hgroup> 
+
+    <img ID="icone" src="_imagens/contato.png"/>
+
+<nav id="menu">
+    <h1> Menu Principal</h1>
+    <ul>
+        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <section id="corpo-full">
+        <article id="noticia-principal">
+             <header id="cabecalho-artigo">
+                <hgroup>
+                    <h3>Fale conosco > Contato</h3>
+                    <h1>Formulário de contato</h1>
+                    <h3>por Thiago Picioli&copy;</h3>
+                    <h3 class="direita">Atulizado em 20/04/2022</h3>
+                </hgroup>
+            </header>
+        </article>
+    </section>
+
+
+<form method="post" id="fContato" action="mailto:tpicioli@gmail.com" oninput="calc_total();"><!--O método GET envia dados via URL (endereço do site). É um método mais rápido e menos seguro. O método POST envia dados por pacotes. É um método um pouco mais lento, mas possui uma segurança maior. O parâmetro ACTION indica o local para onde os dados serão enviados. Quem utiliza MAILTO, deve ter um cliente de e-mail previamente configurado.-->
+    <fieldset id="usuario"><!--A tag FIELDSET em HTML cria conjuntos de campos agrupados dentro de uma linha container que vai identificar cada uma das sessões.-->
+<legend>Identificação do Usuário</legend><!--A tag LEGEND cria uma legenda para cada FIELDSET, um texto que fica sobre as linhas.-->
+    <p><label for="cNome">Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></label></p> <!--size é a quantidade de caraceteres que vão aparecer; maxlength é a quantidade de caractere que vai aceitar; placeholder = dica ao usuário-->
+    <p><label for="cSenha">Senha: <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"/></label></p>
+    <p><label for="cMail">E-mail: <input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="exemplo@exemplo.com"></label></p><!--A tag INPUT serve para criar a grande maioria dos campos de formulários em HTML5. Nessa aula, veremos alguns valores para o parâmetro TYPE: ; A tag INPUT com o parâmetro TYPE = “text” cria uma caixa de texto; O parâmetro SIZE indica a quantidade de caracteres exibidos simultaneamente em uma caixa de texto; O parâmetro MAXLENGTH indica a quantidade de caracteres aceitos em uma caixa de texto; O parâmetro PLACEHOLDER configura um conteúdo informativo dentro de um objeto de formulário. Ao clicar sobre o objeto, o PLACEHOLDER desaparecerá; Para criar uma caixa de senha em um formulário HTML, utilizaremos a tag INPUT com TYPE = “password”, caixas de senha também suportam SIZE, MAXLENGTH e PLACEHOLDER; Para solicitar um e-mail. utilizaremos INPUT com TYPE = “email”, que é exclusivo da HTML5.-->
+    <fieldset id="sexo"><legend>Sexo:</legend> 
+        <input type="radio" name="tSexo" id="cMasc"><label for="cMasc">Masculino</label> <br>
+        <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label></fieldset> 
+    <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"></p><!--Para criar opções a serem selecionadas na forma de botões de rádio, utilizaremos INPUT com parâmetro TYPE = “radio”. Para deixar uma opção previamente marcada, utilizamos o parâmetro CHECKED. OBS: Para objetos do tipo RADIO que fazem parte de um mesmo grupo, todos devem ter o mesmo NAME. Isso é muito importante.
+    Para criar palavras relacionadas a objetos de formulário, utilizamos a tag LABEL com um ID. Para criar a relação entre objetos e LABEL, utilizamos o parâmetro FOR do objeto. A tag INPUT com parâmetro TYPE = “date”, cria uma caixa de seleção de data, com um calendário (depende do navegador utilizado).-->
+</fieldset>
+
+<fieldset id="endereco">
+<legend>Endereço do Usuário</legend>
+    <p><label for="cRua">Logradouro: <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Avenida"></label></p>
+    <p><label for="cNun">Número: <input type="number" name="tNun" id="cNun" min="0" max="99999"></label></p><!--Para permitir a entrada de valores numéricos, utilizamos INPUT com parâmetro TYPE=”number”. Nesse caso, os parâmetros MIN e MAX definem os valores mínimo e máximo para caixas desse tipo.-->
+    <p><label for="cEst">Estado:</label>
+        <select name="tEst" id="cEst"><!--A tag SELECT cria caixas combinadas, utilizando a tag OPTION para criar as opções.
+        O parâmetro SELECTED serve para tornar um OPTION padrão. Os valores podem ser definidos com o parâmetro VALUE.-->
+        <option>Acre (AC)</option> 
+        <option>Alagoas (AL)</option> 
+        <option>Amapá (AP)</option> 
+        <option>Amazonas (AM)</option> 
+        <option>Bahia (BA)</option> 
+        <option>Ceará (CE)</option> 
+        <option>Distrito Federal (DF)</option> 
+        <option>Espírito Santo (ES)</option> 
+        <option>Goiás (GO)</option> 
+        <option>Maranhão (MA)</option> 
+        <option>Mato Grosso (MT)</option> 
+        <option>Mato Grosso do Sul (MS)</option> 
+        <option>Minas Gerais (MG)</option> 
+        <option>Pará (PA)</option> 
+        <option>Paraíba (PB)</option> 
+        <option>Paraná (PR)</option> 
+        <option>Pernambuco (PE)</option> 
+        <option>Piauí (PI)</option> 
+        <option>Rio de Janeiro (RJ)</option> 
+        <option>Rio Grande do Norte (RN)</option> 
+        <option>Rio Grande do Sul (RS)</option> 
+        <option>Rondônia (RO)</option> 
+        <option>Roraima (RR)</option> 
+        <option>Santa Catarina (SC)</option> 
+        <option>São Paulo (SP)</option> 
+        <option>Sergipe (SE)</option> 
+        <option>Tocantins (TO)</option> 
+        </select></p>    
+    <p><label for="cCid">Cidade: </label><input type="text" name="tCid" id="cCid" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades"/></p>
+    <!--<datalist id="cidades">
+        <option value="Rio de Janeiro"></option>
+        <option value="Nova Iguaçu"></option>
+        <option value="Niterói"></option>
+        <option value="Belford Roxo"></option>
+    </datalist>-->
+</fieldset>
+
+<fieldset id="mensagem">
+<legend>Mensagem do Usuário</legend>
+    <p><label for="cUrg">Grau de Urgência: </label><input type="range" name="tUrg" id="cUrg" min="0" max="10" step="1"/></p><!--Range é um objeto que pode ser arrastado para direita ou esquerda-->
+    <p><label for="cMsg">Mensagem: </label>
+        <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+</fieldset>
+
+<fieldset id="pedido">
+<legend>Quero um Google Glass</legend>
+    <p><label for="cPed"><input type="checkbox" name="tPed" id="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="cCor">Cor: </label><input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+    <p><label for="cQtd">Quantidade: </label><input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+    <p><label for="cTot">Preço Total: R$ </label><input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+</fieldset>
+
+<input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+
+</form>
+
+<footer id="rodape">
+    <p>Copyright 2022 - by Thiago Picioli <br>
+    <a href="http://www.facebook.com/ThPiciolli/" target="blank">Facebook</a></a></p> <!--o parâmetro 'target: blank' faz com que o link abra em uma nova aba-->
+    </footer>
+    </div>
+    </body>
+    </html>

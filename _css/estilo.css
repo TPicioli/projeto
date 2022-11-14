@@ -1,0 +1,250 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+    /* Utilizando o modificador @FONT-FACE das CSS3, com o FONT-FAMILY e o SRC, poderemos criar fontes personalizadas utilizando CSS3. Google Fonts */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+   /* background-image: url("fundo.jpg");*/
+}
+
+div#interface {
+    width: 1400px;
+    background-color: white;
+    margin: -20px auto 0px auto; /* Margem de cima, direita, baixo e esquerda */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);  /* Deslocamento lateral, vertical, espalhamento da sombra, cor da sombra  */
+    padding: 10px; /* Margem INTERNA de cima, direita, baixo e esquerda. Se o espalhamento for igual para as 4 medidas, basta informar somente uma vez. Existem a opção de PADDING TOP, PADDIND RIGHT, PADDING LEFT e PADDING BOTON*/
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 1300px;
+    top: 70px;
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid; /* Os modificadores BORDER-TOP, BORDER-BOTTOM, BORDER-LEFT e BORDER-RIGHT configura linhas em volta do objeto e aceita valores como SOLID, DOTTED, DASHED, */
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /* Deslocamento lateral e deslocamento vertical */
+}
+
+header#cabecalho h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    padding: 0px;
+    margin-bottom: 0px; /* Margem de baixo do objeto */
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif; /* Em caso de importação de fonte externa, tem que substituir esse pelo qual o google fontes indicou */
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px; /* Margem de cima do objeto */
+}
+
+/* Formatação de imagens com legendas */
+/* Padrao da class = nome da tag . nome da class */
+/* Referenciando CLASS e ID. A diferença entre CLASS e ID dentro das CSS é na referência. Para usar o CLASS, utilizamos o caractere de ponto (.) e para o ID, utilizaremos a cerquilha (#) */
+
+figure.foto-legenda {
+    position: relative; /* Posição relativa da legenda */
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black; /* Deslocamento horizontal; horizontal; espalhamento */ 
+}
+
+figure.foto-legenda img {
+    width: 100%; /* Largura */
+    height: 100%; /* Altura */
+} /* Tamanho de objetos em CSS Utilizando os parâmetros WIDTH (largura) e HEIGHT (altura), você pode modificar o tamanho de um objeto utilizando CSS. */
+
+figure.foto-legenda figcaption {
+    opacity: 0%; /* Opacidade da legenda */ 
+    position: absolute; /* Utilizando o POSITION em CSS – Diferença entre RELATIVE e ABSOLUTE Existem dois tipos de posicionamento para CSS: com o POSITION RELATIVE, ele terá a localização feita em relação à sua posição atual. Para POSITION ABSOLUTE, ele terá a localização feita em relação a todo o conteúdo. */
+    top: 0px; /* Posição de objetos em CSS Utilizando os parâmetros TOP (topo) e LEFT (esquerda) */
+    background-color: rgba(0,0,0,0.4); /* Cores: red, green, blue e transparência */
+    color: white; /* Letra */
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    box-sizing: border-box; /* Box dentro da borda */
+    transition: opacity 1s; /* efeito de transição. Tempo que demora para exibir o hover */
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1; /* Opacidade de 100% */ 
+} /* O hover vai disparar uma classe especifica quando passar o mouse por cima do objeto (figcapiton) */
+
+/* Formatação do Menu */
+
+nav#menu {
+    display: block; /* Um bloco pode flutuar sobre a tela */
+}
+
+nav#menu ul {
+    list-style: none; /* tira os demarcadores da lista */
+    text-transform: uppercase; /* Deixa todos os ícones da lista com letra maiúscula */
+    position: absolute;  /* Posição absoluta ele fica livre pelo site; posição relativa ele fica preso dentro so container nav */ 
+    top: -20px;
+    left: 850px;
+}
+
+nav#menu li {
+    display: inline-block; /* Faz com quê os blocos sejam exibidos na mesma linha */
+    background-color: #dddddd;
+    padding: 10px; /* Com o PADDING, vamos configurar o espaço interno de cada objeto, enquanto o MARGIN vai definir o espaço externo de cada um deles. */
+    margin: 2px;
+ /* transition: background-color 1s; */
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+section#corpo {
+    display: block;
+    width: 700px;
+    float: left; /* Flutuar. Para usar o float os objetos têm que estar configurados em blocos */
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+
+article#noticia-principal h2 {
+    font-size: 15px;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.direita {
+    text-align: right;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background: #ffffff;
+    margin: 0px;
+}
+
+article#noticia-principal h3 {
+    font-size: 13px;
+    color: #606060;
+}
+
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px; /* Remove os espaços entre as bordas das tabelas */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px; /* Espaço interno de todos os objetos */
+    text-align: left;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.esquerda {
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec td.direita {
+    background-color: #cecece;
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    font: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#lateral {
+    display: block;
+    width: 660px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    
+}
+
+aside#lateral h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 15pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+footer#rodape {
+    clear: both; /* Limpar as seções dos dois lados */
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}

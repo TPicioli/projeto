@@ -1,0 +1,12 @@
+@charset "utf-8"
+
+body {
+    background-color: #d3d3d3;
+    background-image: url("fundo.jpg");
+    
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
